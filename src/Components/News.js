@@ -40,7 +40,6 @@ const News = (props) => {
   };
 
   const fetchMoreData = async () => {
-    setPageNumber(pageNumber + 1);
     let url = `https://newsapi.org/v2/top-headlines?country=${
       props.country
     }&category=${
@@ -48,6 +47,7 @@ const News = (props) => {
     }&apiKey=4c3afa96defc4a8db86eb670db99ffa7&pageSize=${props.pageSize}&page=${
       pageNumber + 1
     }`;
+    setPageNumber(pageNumber + 1);
     // this.setState({ loading: true });
     let res = await fetch(url);
     let parsedData = await res.json();
@@ -61,7 +61,10 @@ const News = (props) => {
 
   return (
     <>
-      <h2 className="text-center">
+      <h2
+        className="text-center"
+        style={{ marginTop: "90px", marginBottom: "50px" }}
+      >
         Top headline from {capitalize(props.category)}{" "}
       </h2>
       {/* {loading && <Spinner />} */}

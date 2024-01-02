@@ -1,6 +1,0 @@
-4c3afa96defc4a8db86eb670db99ffa7
-
-for everything :- 
- https://newsapi.org/v2/everything?q=bitcoin&apiKey=4c3afa96defc4a8db86eb670db99ffa7
-
-
